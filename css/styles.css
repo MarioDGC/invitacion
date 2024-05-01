@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+    /* background-color: #f9f9f9; */
+    background: linear-gradient(to bottom, #f9f9f9 100%, #f7f7f7 100%);
+    min-height: 100vh;
+    max-width: 441px;
+    margin: 0 auto;
+    font-size: .75rem;
+    letter-spacing: .1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.text-suprim {
+    line-height: .85rem;
+}
+
+.display3 {
+    font-size: 3.5rem;
+    line-height: 2.2rem;
+}
+
+.btn-liverpool {
+    background-color: rgb(219, 21, 170);
+    color: whitesmoke;
+}
+
+.btn-conf-asistencia {
+    background-color: #5c644c;
+    color: whitesmoke;
+}
+
+.btn {}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #5c644c;
+}
+
+.upper-case {
+    text-transform: uppercase;
+}
+
+
+.bb-header {
+    background-image: url(../img/header_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 230px;
+}
+
+.bb-footer {
+    background-image: url(../img/footer_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+}
