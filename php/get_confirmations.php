@@ -12,7 +12,7 @@ try {
     $conexion = new Conexion();
 
     $cont = 1;
-    foreach($conexion->query('SELECT nombre FROM marioswe_invitacion.confirmaciones ORDER BY id') as $fila) {
+    foreach($conexion->query('SELECT nombre FROM marioswe_baby_shower.confirmaciones ORDER BY id') as $fila) {
         // print_r($fila['nombre']);
         $content .= '<p class="upper-case my-2 elemento_lista"><b><small>'.$cont++.'</small>| '.htmlentitiestoacentos($fila['nombre']).'</b></p>';
     }
