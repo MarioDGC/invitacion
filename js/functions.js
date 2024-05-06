@@ -43,7 +43,7 @@ $(document).ready(function () {
                 },
                 success: function (data) {
                     if (data.status == 'ok') {
-                        let msj = 'Gracias por acompañar a mi mami.<br><br><small>Atte. Eduardo Noé</small>';
+                        let msj = 'Gracias por acompañarnos.<br><br><small>Fam. González Salinas/small>';
                         // alert(msj);
                         Swal.fire({
                             title: nombre,
@@ -61,13 +61,17 @@ $(document).ready(function () {
                             icon: 'error',
                             title: 'Oops...',
                             text: 'Volver a intentar. Error al confirmar',
-                            footer: 'Si volviste a intentar y no se pudo, notificale a Ceci.'
+                            footer: 'Si volviste a intentar y no se pudo, notificale a Ceci o Mario.'
                         });
                     }
                 },
             });
         } else {
-            alert('Ingresa los dos datos por favor.');
+            Swal.fire({
+                icon: 'info',
+                title: 'Oops...',
+                text: 'Ingresa los dos datos por favor.',
+            });
         }
 
     });

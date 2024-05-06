@@ -4,7 +4,7 @@ class Conexion extends PDO {
 
     private $tipo_de_base = 'mysql';
     private $host = 'mariosweb.com';
-    private $nombre_de_base = 'marioswe_invitacion';
+    private $nombre_de_base = 'marioswe_baby_shower';
     private $usuario = 'marioswe';
     private $contrasena = 'AhwV2366Iy)j[L';
 

@@ -1,18 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Merriweather:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+
+@font-face {
+    font-family: 'aerotis';
+    src: url('../assets/fonts/Aerotis.ttf') format('truetype');
+    /* Puedes agregar estilos adicionales aquí según tus necesidades */
+}
 
 body {
     /* background-color: #f9f9f9; */
-    background: linear-gradient(to bottom, #f9f9f9 100%, #f7f7f7 100%);
-    min-height: 100vh;
+    /* background: linear-gradient(to bottom, #f9f9f9 100%, #f7f7f7 100%); */
+    /* background-image: url('../img/patterns/fabric_of_squares_gray.png'); */
+    background-image: url('../img/patterns/pattern-ch.webp');
+    background-attachment: fixed;
+    /* min-height: 100vh; */
     max-width: 441px;
     margin: 0 auto;
     font-size: .75rem;
-    letter-spacing: .1rem;
-    font-family: 'Playfair Display', serif;
 }
 
-.text-suprim {
-    line-height: .85rem;
+.body_page {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('../img/pattern_biberon.png');
+}
+
+.elemento_lista {
+    position: relative;
+}
+
+
+.confirmation_title {
+    font-family: 'Dancing Script', cursive;
+}
+
+.display2 {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
 }
 
 .display3 {
@@ -26,13 +52,16 @@ body {
 }
 
 .btn-conf-asistencia {
-    background-color: #5c644c;
+    background-color: #b68a39;
     color: whitesmoke;
 }
 
-.btn {}
+p {
+    color: #5c644c;
+    font-family: 'Platypi', serif;
+    font-weight: lighter;
+}
 
-p,
 h1,
 h2,
 h3,
@@ -40,6 +69,36 @@ h4,
 h5,
 h6 {
     color: #5c644c;
+    letter-spacing: .1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.text-gold {
+    color: #b68a39;
+    font-weight: bold;
+}
+
+.title {
+    color: #b68a39;
+}
+
+.title-cursiva {
+    color: #b68a39;
+    font-family: 'aerotis';
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.border-end-gold {
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: #b68a39;
+}
+
+.border-start-gold {
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: #b68a39;
 }
 
 .upper-case {
@@ -48,15 +107,15 @@ h6 {
 
 
 .bb-header {
-    background-image: url(../img/header_img.jpg);
+    background-image: url(../img/header_img.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 230px;
 }
 
 .bb-footer {
-    background-image: url(../img/footer_img.jpg);
+    background-image: url(../img/footer_img.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100px;
+    height: 50px;
 }
