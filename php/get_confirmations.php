@@ -10,17 +10,39 @@ const TABLA = 'confirmaciones';
 try {
 
     $conexion = new Conexion();
+    $action = $_POST['action'];
 
-    $cont = 1;
-    foreach($conexion->query('SELECT nombre FROM marioswe_baby_shower.confirmaciones ORDER BY id') as $fila) {
-        // print_r($fila['nombre']);
-        $content .= '<p class="upper-case my-2 elemento_lista"><b><small>'.$cont++.'</small>| '.htmlentitiestoacentos($fila['nombre']).'</b></p>';
+    switch ($action) {
+        case 'listado':
+
+            $cont = 1;
+            foreach($conexion->query('SELECT nombre FROM marioswe_baby_shower.confirmaciones ORDER BY id') as $fila) {
+                // print_r($fila['nombre']);
+                $content .= '<p class="upper-case my-2 elemento_lista"><b><small>'.$cont++.'</small>| '.htmlentitiestoacentos($fila['nombre']).'</b></p>';
+            }
+
+            $conexion = null;
+
+            $response['status'] = 'ok';
+            $response['content'] = $content;
+
+            break;
+
+        case 'conteo':
+
+            $query = $conexion->query('SELECT SUM(numero_asistentes) as suma FROM marioswe_baby_shower.confirmaciones');
+            $fila = $query->fetch(PDO::FETCH_ASSOC);
+            $suma = $fila['suma'];
+            $content = '<p class="upper-case my-2 h6">Asistentes confirmados '.$suma.'</p>';
+
+            $conexion = null;
+
+            $response['status'] = 'ok';
+            $response['content'] = $content;
+
+            break;
     }
 
-    $conexion = null;
-
-    $response['status'] = 'ok';
-    $response['content'] = $content;
 
 } catch (Exception $e) {
     $response['status'] = 'error';

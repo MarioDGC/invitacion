@@ -18,7 +18,7 @@ body {
     /* min-height: 100vh; */
     max-width: 441px;
     margin: 0 auto;
-    font-size: .75rem;
+    font-size: .85rem;
 }
 
 .body_page {
@@ -108,12 +108,14 @@ h6 {
     background-image: url(../img/header_img.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 230px;
+    background-position: center center;
+    height: 280px;
 }
 
 .bb-footer {
     background-image: url(../img/footer_img.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     height: 50px;
 }

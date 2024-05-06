@@ -9,6 +9,9 @@ $(document).ready(function () {
             type: 'post',
             url: 'php/get_confirmations.php',
             dataType: 'json',
+            data: {
+                action: 'listado'
+            },
             success: function (data) {
                 if (data.status == 'ok') {
                     $("#listaAsistentes").html(data.content);
@@ -23,13 +26,35 @@ $(document).ready(function () {
             },
         });
 
+
+        $.ajax({
+            type: 'post',
+            url: 'php/get_confirmations.php',
+            dataType: 'json',
+            data: {
+                action: 'conteo'
+            },
+            success: function (data) {
+                if (data.status == 'ok') {
+                    $("#conteo_confirmados").html(data.content);
+                } else if (data.status == 'error') {
+                    // alert de sweet alert
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Volver a intentar. Error al obtener el conteode asistentes'
+                    });
+                }
+            },
+        });
+
     }
 
 
     $('#btn_guardar_confirmacion').click(function () {
         // abrir alert
         let nombre = $('#inNombre').val();
-        let num_asistentes = $('#inApellido').val()
+        let num_asistentes = $('#inApellido').val();
 
         if (nombre !== '' && num_asistentes !== '') {
             let asistente = num_asistentes > 1 ? 'asistentes' : 'asistente';
@@ -41,6 +66,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: {
                     Nombre: nombre_asistentes,
+                    Num_asistentes: num_asistentes
                 },
                 success: function (data) {
                     if (data.status == 'ok') {

@@ -4,9 +4,10 @@ require_once 'confirmation.php';
 
 $response = [];
 $asistente_confirmado = htmlentitiestoacentos($_POST['Nombre']);
+$num_asistentes = $_POST['Num_asistentes'];
 
 try {
-    $confirmacion = new Confirmation($asistente_confirmado);
+    $confirmacion = new Confirmation($asistente_confirmado, $num_asistentes);
     $confirmacion->guardar();
     $response['status'] = 'ok';
 } catch (Exception $e) {
