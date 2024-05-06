@@ -43,12 +43,12 @@ $(document).ready(function () {
                 },
                 success: function (data) {
                     if (data.status == 'ok') {
-                        let msj = 'Gracias por acompañarnos.<br><br><small>Fam. González Salinas/small>';
+                        let msj = 'Gracias por acompañarnos.<br><br><small>Fam. González Salinas</small>';
                         // alert(msj);
                         Swal.fire({
-                            title: nombre,
+                            title: capitalize(nombre),
                             html: msj,
-                            imageUrl: 'img/corazon_1.png',
+                            imageUrl: 'img/bautizo_2.png',
                             imageWidth: 50,
                             imageHeight: 50,
                             imageAlt: 'corazon',
@@ -79,6 +79,11 @@ $(document).ready(function () {
     function recargar_60s() {
         location.reload(true);
     }
+
+    const capitalize = (s) => {
+        if (typeof s !== 'string') return '';
+        return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+    };
 
 
 });

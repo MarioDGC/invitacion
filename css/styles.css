@@ -22,7 +22,7 @@ body {
 }
 
 .body_page {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('../img/pattern_biberon.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('../img/patterns/bg-pattern-bautizo.webp');
 }
 
 .elemento_lista {
@@ -84,7 +84,7 @@ h6 {
     color: #b68a39;
     font-family: 'aerotis';
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .border-end-gold {
