@@ -21,6 +21,7 @@ body {
     font-size: .85rem;
 }
 
+
 .body_page {
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('../img/patterns/bg-pattern-bautizo.webp');
 }
@@ -50,7 +51,7 @@ body {
 }
 
 .btn-conf-asistencia {
-    background-color: #b68a39;
+    background-color: #dabb21;
     color: whitesmoke;
 }
 
@@ -72,31 +73,32 @@ h6 {
 }
 
 .text-gold {
-    color: #b68a39;
+    color: #dabb21;
     font-weight: bold;
 }
 
 .title {
-    color: #b68a39;
+    color: #dabb21;
 }
 
 .title-cursiva {
-    color: #b68a39;
+    color: #dabb21;
     font-family: 'aerotis';
     font-size: 1.5rem;
     font-weight: 700;
+    /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.451); */
 }
 
 .border-end-gold {
     border-right-width: 2px;
     border-right-style: solid;
-    border-right-color: #b68a39;
+    border-right-color: #dabb21;
 }
 
 .border-start-gold {
     border-left-width: 2px;
     border-left-style: solid;
-    border-left-color: #b68a39;
+    border-left-color: #dabb21;
 }
 
 .upper-case {
@@ -105,7 +107,7 @@ h6 {
 
 
 .bb-header {
-    background-image: url(../img/header_img.webp);
+    background-image: url(../img/header_img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
